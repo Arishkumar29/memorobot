@@ -1,254 +1,195 @@
-{
+data = {
     "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hello",
-          "Hey there",
-          "Good morning",
-          "Good afternoon",
-          "Good evening",
-          "Vanakkam",
-          "How are you",
-          "What's up"
-        ],
-        "responses": [
-          ["Hello! How can I help you today?", "Hi there! How are you doing?", "Hey! Nice to see you.", "Good to hear from you!"],
-          ["Sollunga", "Enna sollunga", "Eppadi irukeenga", "Vanakkam!"]
-        ]
-      },
-      {
-        "tag": "casual-convo-1",
-        "patterns": [
-          "Sollunga",
-          "Enna sollunga",
-          "Tell me something"
-        ],
-        "responses": [
-          ["Monday clg unda Sunday night polama", "Neenga epdi irukeenga?", "Intha weekend enna plan?", "Neenga enna panreenga ippo?"],
-          ["Anything special happening today?", "What's on your mind?", "I've been waiting to talk to you!", "Got any plans for later?"]
-        ]
-      },
-      {
-        "tag": "casual-convo-2",
-        "patterns": [
-          "Monday clg unda Sunday night polama",
-          "Weekend plans",
-          "What should we do"
-        ],
-        "responses": [
-          ["Theriyala.. Na eppa kalaburanu enaku theriyala...", "Definitely! Sunday night poitu morning class ku polaam", "Sunday night late aaginalum, Monday class important", "Sunday night plan panni paapom"],
-          ["Let's decide on Sunday", "I'm not sure yet, let me think about it", "I'm open to suggestions", "Maybe we can figure it out later"]
-        ]
-      },
-      {
-        "tag": "college-talk",
-        "patterns": [
-          "College epdi iruku",
-          "How's college going",
-          "Class epdi iruku"
-        ],
-        "responses": [
-          ["College super iruku, but assignments romba iruku", "Nalla iruku, but tired aagiten", "Interesting classes, but tests are hard", "Professors are good this semester"],
-          ["I'm enjoying my classes so far", "It's challenging but I'm managing", "Too many assignments due next week", "I'm learning a lot of new things"]
-        ]
-      },
-      {
-        "tag": "food-talk",
-        "patterns": [
-          "Saptiya",
-          "Enna saaptinga",
-          "Had lunch?",
-          "Dinner plans?"
-        ],
-        "responses": [
-          ["Illai, innum saapidala", "Ama, just finished", "Saapidu time aagala", "Ippo dhaan saapten"],
-          ["I had dosa for breakfast", "I'm planning to order pizza tonight", "I haven't eaten yet", "I'm thinking about where to go for dinner"]
-        ]
-      },
-      {
-        "tag": "movie-talk",
-        "patterns": [
-          "Movies paakuriya",
-          "Enna padam paathinga",
-          "Recommended movies?"
-        ],
-        "responses": [
-          ["Latest Marvel padam pakkanum", "Indha weekend oru padam pakkalam", "Netflix la series paathutten", "Neenga enna recommend panreenga?"],
-          ["I watched a great thriller yesterday", "I haven't been to the theater in a while", "I'm waiting for the new release this Friday", "Any recommendations?"]
-        ]
-      },
-      {
-        "tag": "weather-talk",
-        "patterns": [
-          "Weather epdi iruku",
-          "Is it raining?",
-          "Hot outside?"
-        ],
-        "responses": [
-          ["Romba soodu iruku", "Mazhai varalam pola iruku", "Weather super iruku", "Veliya poradhu kastama iruku"],
-          ["It's really sunny today", "I think it might rain later", "Perfect weather for going out", "It's getting colder these days"]
-        ]
-      },
-      {
-        "tag": "study-talk",
-        "patterns": [
-          "Padichiya",
-          "Exam prepare panriya",
-          "How's studying going?"
-        ],
-        "responses": [
-          ["Innum start pannala", "Konjam konjama padichiten", "Exam nerungitadhula, tension aaguthu", "Weekend full ah padikkanum"],
-          ["I've been studying all day", "I need to start preparing soon", "I'm taking a break right now", "I'm feeling confident about the exam"]
-        ]
-      },
-      {
-        "tag": "tiredness",
-        "patterns": [
-          "Tired iruku",
-          "Thoonganum pola",
-          "Feeling sleepy"
-        ],
-        "responses": [
-          ["Nanum tired ah iruku", "Coffee kudichiya?", "Early ah thoongidu", "Konjam rest edunga"],
-          ["Maybe you should take a nap", "I feel the same way", "Get some rest soon", "Don't stay up too late"]
-        ]
-      },
-      {
-        "tag": "weekend-plans",
-        "patterns": [
-          "Weekend plans enna",
-          "Saturday enna panra",
-          "What are you doing this weekend?"
-        ],
-        "responses": [
-          ["Eppo varaikum plan pannala", "Friends oda veliya polama nu iruku", "Veetla rest edukkalam nu iruku", "Oru movie ku polama nu nenachen"],
-          ["I might go shopping", "I'm planning to visit my family", "I have no plans yet", "I need to catch up on some work"]
-        ]
-      },
-      {
-        "tag": "goodbyes",
-        "patterns": [
-          "Bye",
-          "See you",
-          "Talk to you later",
-          "Goodnight"
-        ],
-        "responses": [
-          ["Bye! Take care", "See you soon!", "Talk to you later!", "Have a great day!"],
-          ["Goodnight!", "Bye bye!", "Paathu pesalam", "Nalla thoongavum"]
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": [
-          "Thank you",
-          "Thanks",
-          "Nandri",
-          "Romba thanks"
-        ],
-        "responses": [
-          ["You're welcome!", "Anytime!", "Happy to help!", "No problem at all!"],
-          ["Mention illa", "En kadamai", "Sandosham", "Don't mention it"]
-        ]
-      },
-      {
-        "tag": "compliments",
-        "patterns": [
-          "Nice",
-          "Super",
-          "Awesome",
-          "Semma"
-        ],
-        "responses": [
-          ["Thank you!", "Glad you think so!", "I appreciate that!", "That's kind of you to say!"],
-          ["Romba thanks", "Unnoda opinion romba mukkiyam", "Nandri!", "Unakku pidichiruka? Sandosham!"]
-        ]
-      },
-      {
-        "tag": "home-talk",
-        "patterns": [
-          "Veetla enna panringa",
-          "How's home",
-          "Family epdi irukanga"
-        ],
-        "responses": [
-          ["Ellam nalla irukanga", "Amma cooking panranga", "TV paathutu irukanga", "Veetu velai mudichuten"],
-          ["Everyone's doing well", "Just finished some chores", "Relaxing at home", "It's quite peaceful today"]
-        ]
-      },
-      {
-        "tag": "music-talk",
-        "patterns": [
-          "Music kekuriya",
-          "Favorite songs",
-          "New albums"
-        ],
-        "responses": [
-          ["Ippo ARR songs kekuren", "Anirudh's new album semma", "Old songs dhaan enaku pidikum", "Neenga recommend panna paatu kekuren"],
-          ["I've been listening to the new Spotify playlist", "I love classical music these days", "I discovered some great indie artists", "What music do you enjoy?"]
-        ]
-      },
-      {
-        "tag": "travel-talk",
-        "patterns": [
-          "Travel plans",
-          "Vacation eppo",
-          "Engaiyavathu poirukiya"
-        ],
-        "responses": [
-          ["Ooty ku pona month ponen", "Vacation ku plan pannala", "Next month beach ku polama nu plan", "Foreign trip ku save panren"],
-          ["I visited the mountains last month", "I haven't planned any trips yet", "I'm thinking about a beach vacation", "I'm saving up for an international trip"]
-        ]
-      },
-      {
-        "tag": "work-talk",
-        "patterns": [
-          "Velai epdi iruku",
-          "Office epdi",
-          "Work from home?"
-        ],
-        "responses": [
-          ["Velai busy ah iruku", "Deadline nerunguthu", "New project start panniten", "Work from home continue aguthu"],
-          ["Work has been quite busy", "I have a deadline coming up", "I started a new project", "I'm still working from home"]
-        ]
-      },
-      {
-        "tag": "shopping-talk",
-        "patterns": [
-          "Shopping poga venuma",
-          "New clothes",
-          "Online shopping"
-        ],
-        "responses": [
-          ["Online shopping panren ippo", "Weekend shopping polama?", "Sale nadakuthu, paakalama?", "Enaku shopping panra mood illa"],
-          ["I prefer online shopping these days", "We could go shopping this weekend", "There's a sale happening, want to check it out?", "I'm not in the mood for shopping right now"]
-        ]
-      },
-      {
-        "tag": "motivation",
-        "patterns": [
-          "Motivation illai",
-          "Feeling down",
-          "Need encouragement"
-        ],
-        "responses": [
-          ["Don't worry, ellam seri aagum", "One step at a time", "Unnal mudiyum!", "Take a break and try again"],
-          ["Remember why you started", "It's okay to feel that way sometimes", "Take it one day at a time", "I believe in you!"]
-        ]
-      },
-      {
-        "tag": "game-talk",
-        "patterns": [
-          "Games vilayaduriya",
-          "Video games",
-          "Mobile games"
-        ],
-        "responses": [
-          ["PUBG vilayaduren", "Chess vilayadalam", "Mobile games romba time waste", "Neenga enna vilayadu virumbuvinga?"],
-          ["I've been playing a lot of chess lately", "I enjoy strategy games", "I don't have much time for games these days", "What games do you like?"]
-        ]
-      }
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi", "Hello", "Hey there", "Good morning", "Good afternoon", "Good evening",
+                "Vanakkam", "How are you", "What's up"
+            ],
+            "responses": [
+                "Hello! How can I help you today?", "Hi there! How are you doing?",
+                "Hey! Nice to see you.", "Good to hear from you!",
+                "Sollunga", "Enna sollunga", "Eppadi irukeenga", "Vanakkam!"
+            ]
+        },
+        {
+            "tag": "casual-convo-1",
+            "patterns": ["Sollunga", "Enna sollunga", "Tell me something"],
+            "responses": [
+                "Monday clg unda Sunday night polama", "Neenga epdi irukeenga?",
+                "Intha weekend enna plan?", "Neenga enna panreenga ippo?",
+                "Anything special happening today?", "What's on your mind?",
+                "I've been waiting to talk to you!", "Got any plans for later?"
+            ]
+        },
+        {
+            "tag": "casual-convo-2",
+            "patterns": ["Monday clg unda Sunday night polama", "Weekend plans", "What should we do"],
+            "responses": [
+                "Theriyala.. Na eppa kalaburanu enaku theriyala...", "Definitely! Sunday night poitu morning class ku polaam",
+                "Sunday night late aaginalum, Monday class important", "Sunday night plan panni paapom",
+                "Let's decide on Sunday", "I'm not sure yet, let me think about it",
+                "I'm open to suggestions", "Maybe we can figure it out later"
+            ]
+        },
+        {
+            "tag": "college-talk",
+            "patterns": ["College epdi iruku", "How's college going", "Class epdi iruku"],
+            "responses": [
+                "College super iruku, but assignments romba iruku", "Nalla iruku, but tired aagiten",
+                "Interesting classes, but tests are hard", "Professors are good this semester",
+                "I'm enjoying my classes so far", "It's challenging but I'm managing",
+                "Too many assignments due next week", "I'm learning a lot of new things"
+            ]
+        },
+        {
+            "tag": "food-talk",
+            "patterns": ["Saptiya", "Enna saaptinga", "Had lunch?", "Dinner plans?"],
+            "responses": [
+                "Illai, innum saapidala", "Ama, just finished", "Saapidu time aagala", "Ippo dhaan saapten",
+                "I had dosa for breakfast", "I'm planning to order pizza tonight",
+                "I haven't eaten yet", "I'm thinking about where to go for dinner"
+            ]
+        },
+        {
+            "tag": "movie-talk",
+            "patterns": ["Movies paakuriya", "Enna padam paathinga", "Recommended movies?"],
+            "responses": [
+                "Latest Marvel padam pakkanum", "Indha weekend oru padam pakkalam",
+                "Netflix la series paathutten", "Neenga enna recommend panreenga?",
+                "I watched a great thriller yesterday", "I haven't been to the theater in a while",
+                "I'm waiting for the new release this Friday", "Any recommendations?"
+            ]
+        },
+        {
+            "tag": "weather-talk",
+            "patterns": ["Weather epdi iruku", "Is it raining?", "Hot outside?"],
+            "responses": [
+                "Romba soodu iruku", "Mazhai varalam pola iruku", "Weather super iruku",
+                "Veliya poradhu kastama iruku", "It's really sunny today",
+                "I think it might rain later", "Perfect weather for going out",
+                "It's getting colder these days"
+            ]
+        },
+        {
+            "tag": "study-talk",
+            "patterns": ["Padichiya", "Exam prepare panriya", "How's studying going?"],
+            "responses": [
+                "Innum start pannala", "Konjam konjama padichiten", "Exam nerungitadhula, tension aaguthu",
+                "Weekend full ah padikkanum", "I've been studying all day",
+                "I need to start preparing soon", "I'm taking a break right now",
+                "I'm feeling confident about the exam"
+            ]
+        },
+        {
+            "tag": "tiredness",
+            "patterns": ["Tired iruku", "Thoonganum pola", "Feeling sleepy"],
+            "responses": [
+                "Nanum tired ah iruku", "Coffee kudichiya?", "Early ah thoongidu", "Konjam rest edunga",
+                "Maybe you should take a nap", "I feel the same way",
+                "Get some rest soon", "Don't stay up too late"
+            ]
+        },
+        {
+            "tag": "weekend-plans",
+            "patterns": ["Weekend plans enna", "Saturday enna panra", "What are you doing this weekend?"],
+            "responses": [
+                "Eppo varaikum plan pannala", "Friends oda veliya polama nu iruku",
+                "Veetla rest edukkalam nu iruku", "Oru movie ku polama nu nenachen",
+                "I might go shopping", "I'm planning to visit my family",
+                "I have no plans yet", "I need to catch up on some work"
+            ]
+        },
+        {
+            "tag": "goodbyes",
+            "patterns": ["Bye", "See you", "Talk to you later", "Goodnight"],
+            "responses": [
+                "Bye! Take care", "See you soon!", "Talk to you later!", "Have a great day!",
+                "Goodnight!", "Bye bye!", "Paathu pesalam", "Nalla thoongavum"
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": ["Thank you", "Thanks", "Nandri", "Romba thanks"],
+            "responses": [
+                "You're welcome!", "Anytime!", "Happy to help!", "No problem at all!",
+                "Mention illa", "En kadamai", "Sandosham", "Don't mention it"
+            ]
+        },
+        {
+            "tag": "compliments",
+            "patterns": ["Nice", "Super", "Awesome", "Semma"],
+            "responses": [
+                "Thank you!", "Glad you think so!", "I appreciate that!", "That's kind of you to say!",
+                "Romba thanks", "Unnoda opinion romba mukkiyam", "Nandri!", "Unakku pidichiruka? Sandosham!"
+            ]
+        },
+        {
+            "tag": "home-talk",
+            "patterns": ["Veetla enna panringa", "How's home", "Family epdi irukanga"],
+            "responses": [
+                "Ellam nalla irukanga", "Amma cooking panranga", "TV paathutu irukanga",
+                "Veetu velai mudichuten", "Everyone's doing well", "Just finished some chores",
+                "Relaxing at home", "It's quite peaceful today"
+            ]
+        },
+        {
+            "tag": "music-talk",
+            "patterns": ["Music kekuriya", "Favorite songs", "New albums"],
+            "responses": [
+                "Ippo ARR songs kekuren", "Anirudh's new album semma", "Old songs dhaan enaku pidikum",
+                "Neenga recommend panna paatu kekuren", "I've been listening to the new Spotify playlist",
+                "I love classical music these days", "I discovered some great indie artists",
+                "What music do you enjoy?"
+            ]
+        },
+        {
+            "tag": "travel-talk",
+            "patterns": ["Travel plans", "Vacation eppo", "Engaiyavathu poirukiya"],
+            "responses": [
+                "Ooty ku pona month ponen", "Vacation ku plan pannala", "Next month beach ku polama nu plan",
+                "Foreign trip ku save panren", "I visited the mountains last month",
+                "I haven't planned any trips yet", "I'm thinking about a beach vacation",
+                "I'm saving up for an international trip"
+            ]
+        },
+        {
+            "tag": "work-talk",
+            "patterns": ["Velai epdi iruku", "Office epdi", "Work from home?"],
+            "responses": [
+                "Velai busy ah iruku", "Deadline nerunguthu", "New project start panniten",
+                "Work from home continue aguthu", "Work has been quite busy", "I have a deadline coming up",
+                "I started a new project", "I'm still working from home"
+            ]
+        },
+        {
+            "tag": "shopping-talk",
+            "patterns": ["Shopping poga venuma", "New clothes", "Online shopping"],
+            "responses": [
+                "Online shopping panren ippo", "Weekend shopping polama?", "Sale nadakuthu, paakalama?",
+                "Enaku shopping panra mood illa", "I prefer online shopping these days",
+                "We could go shopping this weekend", "There's a sale happening, want to check it out?",
+                "I'm not in the mood for shopping right now"
+            ]
+        },
+        {
+            "tag": "motivation",
+            "patterns": ["Motivation illai", "Feeling down", "Need encouragement"],
+            "responses": [
+                "Don't worry, ellam seri aagum", "One step at a time", "Unnal mudiyum!",
+                "Take a break and try again", "Remember why you started",
+                "It's okay to feel that way sometimes", "Take it one day at a time",
+                "I believe in you!"
+            ]
+        },
+        {
+            "tag": "game-talk",
+            "patterns": ["Games vilayaduriya", "Video games", "Mobile games"],
+            "responses": [
+                "PUBG vilayaduren", "Chess vilayadalam", "Mobile games romba time waste",
+                "Neenga enna vilayadu virumbuvinga?", "I've been playing a lot of chess lately",
+                "I enjoy strategy games", "I don't have much time for games these days", "What games do you like?"
+            ]
+        }
     ]
-  }
+}
